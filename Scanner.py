@@ -4,17 +4,17 @@ import boto3
 s3 = boto3.client('s3')
 
 response = s3.list_buckets()
-print('----dict rcvd from s3.list_buckets()---->', response)        #response comes in as a dict
+print('---rcvd from s3.list_buckets()--->', response)  #response comes in as a dict
 
 for key in response:    
-	print(key, '<----key from list_buckets')         #Buckets will return a list
+	print(key, '<---key from list_buckets')            #display the keys in that dict
 
-pails = response['Buckets']  #extract data on a single key which will yield a list
-print('----list rcvd the Buckets key---->', pails)
+response2 = response['Buckets']                        #extract list from the 'Buckets' key
+print('---rcvd the Buckets key--->', response2)
 
-print('----These are the buckets in your account:--->')
-for item in pails:
-	print(item['Name'])
+print('These are the buckets in your account:') #display key 'Name' for each item in that list 
+for item in response2:                                 #these are the bucketnames for the account configured
+	print(item['Name'])                                #under the pc's AWS console configuration.
 
   
 
