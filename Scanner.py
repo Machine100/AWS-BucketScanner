@@ -12,7 +12,7 @@ for key in response:
 response2 = response['Buckets']                        #extract list from the 'Buckets' key
 print('---rcvd the Buckets key--->', response2)
 
-print('These are the buckets in your account:') #display key 'Name' for each item in that list 
+print('These are the buckets in your account:')        #display key 'Name' for each item in that list 
 for item in response2:                                 #these are the bucketnames for the account configured
 	print(item['Name'])                                #under the pc's AWS console configuration.
 
