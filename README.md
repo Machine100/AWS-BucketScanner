@@ -12,7 +12,8 @@ Because this scanner finds data, this is not an indication of a security hole.
 Many public buckets at AWS are meant to be public.
 
 
-What I Learned
+What I Learned:
+
 implementation of AWS API calls
 Programatically access AWS services over their API.
 basic S3 API structure
