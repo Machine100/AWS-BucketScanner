@@ -9,7 +9,7 @@ print('---rcvd from s3.list_buckets()--->', response)  #response comes in as a d
 for key in response:    
 	print(key, '<---key from list_buckets')            #display the keys in that dict
 
-response2 = response['Buckets']                        #extract list from the 'Buckets' key
+response2 = response['Buckets']                        #from key 'Buckets', extract a list
 print('---rcvd the Buckets key--->', response2)
 
 print('These are the buckets in your account:')        #display key 'Name' for each item in that list 
