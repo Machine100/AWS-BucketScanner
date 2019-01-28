@@ -1,20 +1,14 @@
 AWS BUCKET SCANNER
 
-This is a program that looks for buckets on the internet that are marked public. 
+This program looks for public AWS buckets.
+A wordlist is used to generate possible bucket names.
 
-
-A wordlist is used to generate probable bucket names.
-
-For each word, an API call is made to the bucket endpoint. A response from the API with data
-indicates that a bucket exists and is marked as public.
-
-Because this scanner finds data, this is not an indication of a security hole.
-Many public buckets at AWS are meant to be public.
-
+For each possible name, an API call is made to the name's endpoint. A response from the endpoint with data
+indicates the name exists publicly.
 
 What I Learned:
 
-implementation of AWS API calls
+Implementation of AWS API calls
 Programatically access AWS services over their API.
-basic S3 API structure
+Basic S3 API structure
 Python
