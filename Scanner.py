@@ -18,4 +18,11 @@ for item in response2:                                 #these are the bucketname
 
   
 
-	                    
+	  
+##call s3 to list current buckets
+#response = s3.list_buckets()
+
+#get list of bucket names
+#buckets = [bucket['Name'] for bucket in response['Buckets']]
+
+#print('Bucket List: %s' % buckets)                  
