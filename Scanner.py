@@ -1,13 +1,10 @@
 
 
 import boto3
-s3 = boto3.client('s3')
+s3 = boto3.client('s3')                                #nstantiate a client connection to S3
 
 response = s3.list_buckets()
 print('<---rcvd from s3.list_buckets()---', response)  #response comes in as a dict
-
-for key in response:    
-	print(key, '---key from list_buckets')            #display the keys in that dict
 
 response2 = response['Buckets']                        #from key 'Buckets', extract a list
 print('<---rcvd the Buckets key---', response2)
