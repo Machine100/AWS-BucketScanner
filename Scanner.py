@@ -11,7 +11,8 @@ print(file.name)                  #call a method on the open() object
 words=file.read().split('\n')  #call a method on the open() object to genearte the desired list. Newline characters are stripped.   
 #print(words)                   
 
-for i in words:     bucket = s3.Bucket('word')     
+for i in words:     
+	bucket = s3.Bucket('word')     
 	exists = true     
 	try:
 		s3.meta.client.head_bucket('name')     
