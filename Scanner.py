@@ -2,17 +2,15 @@
 
 import boto3
 import botocore
-s3 = boto3.client('s3')                                #instantiate a client connection to S3
-
-#open a wordlist file using python's built in open() function
-file = open('wordlist.txt')
+s3 = boto3.client('s3')           #instantiate a client connection to S3
+file = open('wordlist.txt')       #open a wordlist file using python's built in open() function
 print(file)                       #display the object's metadata?
 print(file.name)                  #call a method on the open() object
-words=file.read().split('\n')  #call a method on the open() object to genearte the desired list. Newline characters are stripped.   
+words=file.read().split('\n')     #call a method on the open() object to genearte the desired list. Newline characters are stripped.   
 #print(words)                   
 
 for word in words:
-	bucket = s3.Bucket(word)     
+	#bucket = s3.Bucket(word)     
 	exists = true     
 	try:
 		s3.meta.client.head_bucket('name')     
