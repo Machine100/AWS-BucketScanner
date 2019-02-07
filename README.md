@@ -2,10 +2,10 @@ AWS BUCKET SCANNER
 
 This program looks for public AWS buckets.
 A wordlist is used to generate possible bucket names.
-For each possible name, an API call is made to the name's S3 endpoint.
+For each possible name, a call is made to the resoruce object.
 
 
-This is original code authored by Brian Leggett.
+
 
 What I Learned:
 
