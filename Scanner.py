@@ -15,7 +15,7 @@ for word in words:
 	try:
 		s3resource.meta.client.head_bucket(Bucket=word)     #This is the official way to check if a bucket exists
 	except botocore.exceptions.ClientError as e:            #Which is to say go through the resource object.
-		error_code = e.response['Error']['Code']                
+		error_code = e.response['Error']['Code']            #This snippet copied from official docs.    
 		if error_code == '404': 
 			exists=False
 	print ('Bucket', word,':', exists) 
